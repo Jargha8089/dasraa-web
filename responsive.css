@@ -1,0 +1,71 @@
+/* Responsive styles */
+  
+  /* Adjust the layout for small screens */
+  @media (max-width: 768px) {
+    
+    body{
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    section,
+    .container,
+    .content,
+    .content .image,
+    .content .text-box,
+    .media-icons,
+    .info,
+    .media-info,
+    .footer .image img {
+      width: 100%;
+      padding: 40px 20px;
+    }
+  
+    .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .content .text-box {
+      transform: translate(0);
+      margin-left: auto;
+    }
+  
+    .content .image {
+      max-width: none;
+    }
+  
+    .main-title {
+      font-size: 3em;
+      margin-bottom: 30px;
+    }
+  
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 60px;
+    }
+  
+    .media-icons a {
+      margin: 10px;
+    }
+
+  }
+
+/* portfolio */
+
+  @media only screen and (max-width: 768px) {
+    .portfolio .heading{
+        width: 90%;
+    }
+    .portfolio .heading h3{
+        font-size: 3em;
+    }
+    .portfolio .box{
+        flex-direction: column;
+    }
+    .portfolio .box .gallary{
+        width: 100%;
+    }
+  }

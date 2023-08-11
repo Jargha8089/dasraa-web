@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+/* Reset some default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Section */
+#header {
+    position: fixed;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f7f7f7;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-item a.active {
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 50px 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-info img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+.contact-list i {
+    margin-right: 5px;
+}
+
+/* To Top Button */
+.to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    display: none;
+}
+
+/* Media Queries - Adjust as needed */
+@media (max-width: 768px) {
+    .container, .hero-img {
+        flex: 100%;
+    }
+}
+

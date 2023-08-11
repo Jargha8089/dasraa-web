@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Dynamic Form</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            min-height: 100vh;
+            background: #2362B9;
+        }
+
+        form {
+            padding: 25px;
+            background: #fff;
+            max-width: 752px;
+            width: 100%;
+            margin: 25px;
+            border: 10px solid #084D99;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas: ". .";
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .detail {
+            text-align: right;
+            color: #084D99;
+        }
+
+        .detail h3 {
+            font-weight: bold;
+            font-size: 12pt;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .detail h4 {
+            font-size: 8pt;
+            line-height: 14px;
+            font-weight: 100;
+        }
+
+        form h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0px 0 30px;
+            color: #0C539D;
+        }
+
+        form .form-group {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .fullname {
+            display: flex;
+            gap: 10px;
+        }
+
+        #firstname,
+        #lastname {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .secondrow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+            grid-auto-flow: row;
+            grid-template-areas: ". .";
+        }
+
+        .form-group.recommendus,
+        .form-group.agree {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .recommendus-option,
+        .agree-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .recommendus-option input[type="radio"],
+        .agree-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            vertical-align: middle;
+        }
+
+        form label {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
+
+        form input,
+        form select {
+            height: 45px;
+            padding: 10px;
+            width: 100%;
+            font-size: 15px;
+            outline: none;
+            background: #fff;
+            border-radius: 3px;
+            border: 1px solid #0C539D;
+        }
+
+        .form-group.hearabout select {
+            width: 49%;
+        }
+
+        form input:focus,
+        form select:focus {
+            border-color: #f36522;
+        }
+
+        form input.error,
+        form select.error {
+            border-color: #f91919;
+            background: #f9f0f1;
+        }
+
+        form small {
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+            color: #f91919;
+        }
+
+        .submit-btn {
+            display: flex;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .submit-btn input {
+            color: white;
+            border: none;
+            height: auto;
+            font-size: 16px;
+            padding: 13px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            text-align: center;
+            background: #f36522;
+            transition: 0.2s ease;
+        }
+
+        .submit-btn input:hover {
+            background: #c54b13;
+        }
+
+        .form button:hover {
+            background: rgb(88, 56, 250);
+        }
+
+        form hr:nth-of-type(2),
+        form hr:nth-of-type(3) {
+            border-color: #2362B9;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="top">
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="detail">
+                <h3>Multi Dynamic</h3>
+                <h4>admin@multidynamic.com.au</h4>
+                <h4>www.multidynamic.com.au</h4>
+                <h4>1800 1MULTI</h4>
+            </div>
+        </div>
+        <h2>New customer registration for Event</h2>
+        <hr>
+        <div class="form-group name">
+            <label for="fullname">Full Name</label>
+            <div class="fullname">
+                <input type="text" id="firstname" placeholder="First Name">
+                <input type="text" id="lastname" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="secondrow">
+            <div class="form-group phone-no">
+                <label for="phone-no">Phone Number</label>
+                <input type="text" id="phone-no" placeholder="(00) 0000-0000">
+            </div>
+            <div class="form-group email">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your Email Address">
+            </div>
+        </div>
+        <div class="form-group address">
+            <label for="address">Address</label>
+            <input type="text" id="address">
+        </div>
+
+        <hr>
+
+        <div class="secondrow">
+            <div class="form-group purpose">
+                <label for="purpose">State your purpose of visit:</label>
+                <input type="text" id="purpose">
+            </div>
+            <div class="form-group describe">
+                <label for="describe">Which of the following describes you the best?</label>
+                <select id="describe">
+                    <option value="" selected disabled>Please Select</option>
+                    <option value="investor">Investor</option>
+                    <option value="firsthomebuyer">First Home Buyer</option>
+                    <option value="secondhomebuyer">Second Home Buyer</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group hearabout">
+            <label for="hearabout">How did you hear about us?</label>
+            <select id="hearabout">
+                <option value="" selected disabled>Please Select</option>
+                <option value="newspaper">Newspaper</option>
+                <option value="internet">Internet</option>
+                <option value="socialmedia">Social Media</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group recommend">
+            <label for="recommendus">Will you be willing to recommend us?</label>
+            <div class="recommendus-option">
+                <input type="radio" id="option-yes" value="Yes">
+                <label for="option-yes">Yes</label>
+            </div>
+            <div class="recommendus-option">
+                <input type="radio" id="option-no" value="No">
+                <label for="option-no">No</label>
+            </div>
+            <div class="recommendus-option">
+                <input type="radio" id="option-maybe" value="Maybe">
+                <label for="option-maybe">Maybe</label>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group agree">
+            <label for="agree">I consent to provide my data to Multi Dynamic for the purpose of gathering and providing information.</label>
+            <div class="agree-option">
+                <input type="radio" id="option-yes" value="Yes">
+                <label for="option-yes">I agree</label>
+            </div>
+        </div>
+
+        <hr>
+
+
+        <div class="form-group submit-btn">
+            <input type="reset" value="Clear">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+</body>
+
+</html>
